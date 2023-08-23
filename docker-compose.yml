@@ -1,0 +1,10 @@
+version: '3'
+services:
+  top.api:
+    image: docker.pkg.github.com/alaricode/nestjs-demo/nestjs-demo:develop
+    container_name: nestjs
+    restart: always
+    ports:
+      - 3000:3000
+    volumes:
+      - ./.env:/opt/app/.env
